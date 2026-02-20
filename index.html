@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rupak Khadka</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/RKlogo.png">
+    <link rel="shortcut icon" href="images/RKlogo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Left column fixed on desktop */
+        @media (min-width: 768px) {
+            .left-column {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 16.6667%; /* col-md-2 */
+                overflow-y: auto;
+            }
+
+            .right-column {
+                margin-left: 16.6667%;
+            }
+        }
+
+        /* Mobile layout: left column becomes top navbar */
+        @media (max-width: 767.98px) {
+            .left-column {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 1rem;
+            }
+
+            .profile-section {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .nav {
+                flex: 1 1 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+
+            .nav-link {
+                margin: 0.25rem 0.5rem;
+            }
+
+            .social-links {
+                flex: 1 1 100%;
+                justify-content: center;
+            }
+
+            .right-column {
+                margin-left: 0;
+                height: auto;
+                overflow: visible;
+                padding: 1rem;
+            }
+        }
+
+        /* Optional scrollbar style for right column on desktop */
+        .right-column::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .right-column::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- LEFT COLUMN -->
+        <div class="left-column d-flex flex-column p-4">
+
+            <!-- profile Section -->
+            <div class="profile-section">
+                    <img src="images/profile/profile.jpg" class="profile-photo" alt="Profile Photo">
+                    <h2>Rupak Khadka</h2>
+                    <p class="profile-title">Civil Engineer | Traffic Engineer</p>
+                    <p class="profile-location">Lubbock, Texas, USA</p>
+            </div>
+
+            <!-- Navigation Section -->
+            <nav class="nav flex-column mt-3 mb-auto text-center">
+                <a href="#" class="nav-link section-link active" data-section="about">About Me</a>
+                <a href="#" class="nav-link section-link" data-section="skills">Skills</a>
+                <a href="#" class="nav-link section-link" data-section="experience">Experience</a>
+                <a href="#" class="nav-link section-link" data-section="projects">Projects</a>
+                <a href="#" class="nav-link section-link" data-section="education">Education</a>
+                <a href="#" class="nav-link section-link" data-section="research">Research</a>
+                <a href="#" class="nav-link section-link" data-section="publications">Publications</a>
+                <a href="#" class="nav-link section-link" data-section="licenses">Licenses</a>
+                <a href="#" class="nav-link section-link" data-section="contact">Contact Me</a>
+            </nav>
+
+            <!-- Social Links at Bottom -->
+            <div class="social-links">
+                <a href="https://facebook.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column p-4">
+            <div id="section-content">
+
+                <!-- ABOUT ME -->
+                <div id="about" class="section about-section">
+                    <div class="about-image" style="background-image: url('images/about/traffic.jpg');"></div>
+                    <div class="about-content">
+                        <h3>LET'S INTRODUCE ABOUT MYSELF!</h3>
+                        <p>I am a Civil Engineer from Kathmandu, Nepal. I completed my Bachelor of Civil Engineering at the <strong>Institute of Engineering (IOE), Pulchowk Campus, Tribhuvan University</strong>. Currently, I am pursuing a PhD in Civil Engineering, specializing in <strong>Transportation Systems Engineering</strong> at <strong>Texas Tech University, Lubbock, Texas</strong>.</p>
+                        <p>My research focuses on traffic data analysis using LIDAR, traffic safety and optimization, surrogate safety measures, connected and autonomous vehicles (CAVs), intelligent transportation systems (ITS), and smart city solutions.</p>
+                        <p><strong>Permanent Address:</strong> Kathmandu, Nepal</p>
+                    </div>
+                </div>
+
+                <!-- SKILLS -->
+                <section id="skills" class="section skills-section">
+                    <h3 class="skills-title">Skills</h3>
+                    <div class="skills-container">
+
+                        <div class="category-column">
+                            <h4 class="category-title">Traffic Simulation and Modelling</h4>
+                            <ul class="software-list">
+                                <li class="software-item">
+                                    <span class="software-name">VISSIM</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Traffic data simulation</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">SIDRA</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Undergraduate Research</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">Synchro</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Signal re-timing of Fort-Worth</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">TransCAD</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Modelling of Intersection</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="category-column">
+                            <h4 class="category-title">Data Analysis</h4>
+                            <ul class="software-list">
+                                <li class="software-item">
+                                    <span class="software-name">ArcGIS Pro</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Spatial Analsyis of crash data</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">ArcGIS Online</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Interactive dashboard development</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">MS Office (Word, Excel, PowerPoint)</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Regular use</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="category-column">
+                            <h4 class="category-title">Programming</h4>
+                            <ul class="software-list">
+                                <li class="software-item">
+                                    <span class="software-name">Python</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Traffic data analytics, LiDAR point cloud processing, ML</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">R</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Statistical Analysis of traffic crash data</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">C</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Development of Library Management System</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="category-column">
+                            <h4 class="category-title">Design and Drafting</h4>
+                            <ul class="software-list">
+                                <li class="software-item">
+                                    <span class="software-name">OpenRoad Designer</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Graduate Final Project</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">Civil 3D</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Professional experience</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">AutoCAD</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Professional experience</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="category-column">
+                            <h4 class="category-title">Structural Design and Analysis</h4>
+                            <ul class="software-list">
+                                <li class="software-item">
+                                    <span class="software-name">ETABS</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Professional Experience</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">SAFE</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Professional Experience</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">Sketchup 3D</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Professional experience</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="category-column">
+                            <h4 class="category-title">Creation and Others</h4>
+                            <ul class="software-list">
+                                <li class="software-item">
+                                    <span class="software-name">Photoshop</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Freelance photo editing</li>
+                                    </ul>
+                                </li>
+                                <li class="software-item">
+                                    <span class="software-name">Premiere Pro</span>
+                                    <ul class="software-info-list">
+                                        <li><strong>Proficiency:</strong> Intermediate</li>
+                                        <li><strong>Projects:</strong> Freelance video creation and editing</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- EXPERIENCE -->
+                <div id="experience" class="section experience-section">
+                    <h2 class="experience-title">Experience</h2>
+
+                    <div class="experience-container">
+
+                        <!-- Right side circular images -->
+                        <div class="experience-images">
+                            <div class="image-frame">
+                                <img src="images/experience/experience2.jpg" alt="Experience Image">
+                            </div>
+                            <div class="image-frame">
+                                <img src="images/experience/experience3.jpg" alt="Experience Image">
+                            </div>
+                        </div>
+
+                        <!-- Left side timeline content -->
+                        <div class="experience-content-wrapper">
+                            <div class="timeline-branch-line">
+                                <div class="timeline-branch-line-item">
+                                    <div class="timeline-branch-line-content">
+                                        <h3>Research Assistant <span class="timeline-year">| August 2025 – Present</span></h3>
+                                        <span class="timeline-branch-meta">Texas Tech University, USA</span>
+                                        <p>Traffic Safety Analysis, Crash Studies, Intergration of ML and AI in Traffic Engineering</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-branch-line-item">
+                                    <div class="timeline-branch-line-content">
+                                        <h3>Civil Engineer <span class="timeline-year">| Jan 2024 – July 2025</span></h3>
+                                        <span class="timeline-branch-meta">Digicon Engineering Consult Pvt. Ltd, Nepal</span>
+                                        <p>Designing and reviewing building structures.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PROJECTS -->
+                <div id="projects" class="section projects-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-container">
+                        <div class="project-card">
+                            <div class="card-inner">
+                                <div class="card-front" style="background-image: url('images/projects/dash.jpg');">
+                                    <div class="card-overlay">
+                                        <span class="project-title">Development of Traffic Safety Analysis Dashboard for Amarillo and Childress district (TxDOT project)</span>
+                                        <span class="project-location">Lubbock, TX</span>
+                                        <span class="project-role">Research Assistant</span>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <p class="project-description">Developed an interactive traffic safety analysis dashboard for the Lubbock and Childress districts in 2026 while serving as a Research Assistant at Texas Tech University, focusing on the integration and analysis of multi-year crash data, roadway characteristics, and exposure measures to evaluate crash frequency, severity, spatial patterns, and contributing factors. The dashboard applied advanced analytical and visualization techniques to identify high-risk locations and systemic safety issues, enabling agencies to prioritize safety investments, design targeted countermeasures, and support evidence-based planning aimed at reducing crashes, injuries, and fatalities.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-inner">
+                                <div class="card-front" style="background-image: url('images/projects/retro.jpg');">
+                                    <div class="card-overlay">
+                                        <span class="project-title">Vulnerability Assessment and Retrofitting of Historical Structures</span>
+                                        <span class="project-location">Kathmandu, Nepal</span>
+                                        <span class="project-role">Civil Engineer</span>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <p class="project-description">Conducted vulnerability assessment, retrofitting planning, and site supervision of major historical structures in Kathmandu, Nepal (2024), including Tri-Chandra Campus, Ghantaghar, and Bal Mandir. The work involved detailed structural evaluation, material characterization, damage assessment, and seismic performance analysis to identify critical deficiencies and earthquake-induced risks. Context-sensitive retrofitting strategies were developed and supervised to enhance seismic resilience while preserving architectural and cultural integrity, supporting the sustainable conservation of historically significant infrastructure.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- EDUCATION -->
+                <div id="education" class="section education-section">
+                    <h3 class="education-title">Education</h3>
+                    <div class="education-container">
+                        <div class="education-card" onclick="toggleEducation(this)">
+                            <div class="education-image" style="background-image: url('images/education/ttu.jpg');"></div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <span class="education-name">Doctor of Philosophy (PhD)</span>
+                                    <span class="education-year">| 2030</span>
+                                </div>
+                                <div class="education-org">Texas Tech University, USA</div>
+                                <div class="education-details">
+                                    <strong>Major:</strong> Civil Engineering<br>
+                                    <strong>Courses:</strong> Advanced Geometric Design of Highway, Traffic Flow Theory, Advanced Traffic Analysis, LiDAR: Application in Traffic Engineering, GIS, Machine Learning
+                                </div>
+                            </div>
+                            <div class="education-arrow"></div>
+                        </div>
+                        <div class="education-card" onclick="toggleEducation(this)">
+                            <div class="education-image" style="background-image: url('images/education/ttu.jpg');"></div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <span class="education-name">Master of Science (MS)</span>
+                                    <span class="education-year">| 2027</span>
+                                </div>
+                                <div class="education-org">Texas Tech University, USA</div>
+                                <div class="education-details">
+                                    <strong>Major:</strong> Civil Engineering (Transportation Systems)<br>
+                                    <strong>Courses:</strong> Advanced Geometric Design of Highway, Traffic Flow Theory, Advanced Traffic Analysis, LiDAR: Application in Traffic Engineering, GIS, Machine Learning
+                                </div>
+                            </div>
+                            <div class="education-arrow"></div>
+                        </div>
+                        <div class="education-card" onclick="toggleEducation(this)">
+                            <div class="education-image" style="background-image: url('images/education/ioe.jpg');"></div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <span class="education-name">Bachelor of Civil Engineering (BCE)</span>
+                                    <span class="education-year">| 2023</span>
+                                </div>
+                                <div class="education-org">Tribhuvan University, Institute of Engineering, Pulchowk Campus, Nepal</div>
+                                <div class="education-details">
+                                    <strong>Major:</strong> Civil Engineering<br>
+                                    <strong>Courses:</strong> Transportation and Traffic Engineering, Soil and Foundation Engineering, Structural Mechanics and Dynamics, Structural Analysis, Fluid Mechanics and Dynamics, Advanced Calculus, Probability and Statistics, Engineering Ethics and Economics.
+                                </div>
+                            </div>
+                            <div class="education-arrow"></div>
+                        </div>
+                        <div class="education-card" onclick="toggleEducation(this)">
+                            <div class="education-image" style="background-image: url('images/education/sos.jpg');"></div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <span class="education-name">Higher Secondary (+2)</span>
+                                    <span class="education-year">| 2018</span>
+                                </div>
+                                <div class="education-org">SOS Hermann Gmeiner School-Bhaktapur, National Education Board (NEB), Nepal</div>
+                                <div class="education-details">
+                                    <strong>Major:</strong> Science<br>
+                                    <strong>Courses:</strong> Physics, Mathematics, Chemistry, Biology
+                                </div>
+                            </div>
+                            <div class="education-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESEARCH -->
+                <div id="research" class="section research-section">
+                    <h3 class="research-title">Research Interests & Works</h3>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/safety.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Traffic Safety Analysis</h4>
+                                <p class="research-description">Focuses on developing analytical, simulation-based, and data-driven models to represent traffic flow dynamics and network behavior. Emphasis is placed on optimizing traffic performance through advanced algorithms, congestion mitigation strategies, and system-level efficiency improvements.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/lidar.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Application of LiDAR in Transportation Systems</h4>
+                                <p class="research-description">Explores the use of LiDAR data for high-resolution mapping, roadway geometry extraction, traffic monitoring, and infrastructure assessment. This research leverages point cloud processing and sensor fusion to enhance transportation planning, operations, and safety analysis.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/operation.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Traffic Operations and Control</h4>
+                                <p class="research-description">Concentrates on the analysis and optimization of traffic control strategies, including signal timing, adaptive signal control, and corridor-level operations. This work aims to improve mobility, reduce delays, and enhance system reliability under varying demand conditions.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/ssm.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Surrogate Safety Measures</h4>
+                                <p class="research-description">Investigates non-crash-based safety indicators such as time-to-collision, post-encroachment time, and conflict severity. These measures enable proactive safety assessment using trajectory data, simulation outputs, and video analytics before crashes occur.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/bigdata.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Big Data Analytics in Transportation</h4>
+                                <p class="research-description">Applies machine learning, statistical modeling, and large-scale data processing to transportation datasets such as probe vehicle data, sensor data, and connected vehicle information. The objective is to extract actionable insights for traffic prediction, system optimization, and decision support.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/intelligent.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Intelligent Transportation Systems (ITS)</h4>
+                                <p class="research-description">Focuses on the integration of sensing, communication, and control technologies to improve transportation efficiency and safety. Research includes connected and autonomous vehicles, real-time traffic management, and smart infrastructure applications.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/planning.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Transportation Planning</h4>
+                                <p class="research-description">Focuses on the systematic analysis of travel demand, land-use interactions, and multimodal network performance to support long-term transportation decision-making. Emphasis is placed on accessibility, equity, sustainability, and data-driven planning approaches for developing efficient and resilient transportation systems.</p>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-image" style="background-image: url('images/research/cities.jpg');"></div>
+                            <div class="research-content">
+                                <h4 class="research-topic">Smart Cities</h4>
+                                <p class="research-description">Explores the application of digital technologies, real-time data, and intelligent infrastructure to enhance urban mobility and city operations. This research integrates transportation systems with IoT, big data analytics, and connected technologies to improve efficiency, safety, and overall urban livability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUBLICATIONS -->
+                <div id="publications" class="section publication-section">
+                    <h3 class="publication-title">Publications</h3>
+                    <div class="publication-container">
+                        <div class="publication-card" onclick="togglePublication(this)">
+                            <div class="publication-content">
+                                <div class="publication-header">
+                                    <span class="publication-name">Signal Optimization to Improve Traffic Conditions: A Case Study of Satdobato and Gwarko Intersections, Kathmandu Valley<span class="published-year"> | 2024</span></span>
+                                </div>
+                                <div class="journal-org">Nepal Journal of Civil Engineering</div>
+                                <div class="abstract-details">
+                                    <strong>Link:</strong> <a href="https://civil.pcampus.edu.np/journal/index.php/njce/article/view/4.1-4/FullText-4.1-4" target="_blank" rel="noopener noreferrer">Click Here to View Publication</a><br>
+                                    <strong>Abstract:</strong> This  study  introduces  a  methodology  for  assessing  intersection  performance  and  examining  varioussignalization  strategies.   The  methodology  was  applied  to  analyze  and  optimize  traffic  signals  at  twointersections  in  Kathmandu  Valley,  namely  Satdobato  and  Gwarko.   Micro-simulation  software  ’SIDRAIntersection 9.0’ was utilized to model these intersections, with calibration and validation performed usingfield data.  The performance assessment primarily focused on average delay and back of queue length,followed by network evaluation. The current operational performance at Satdobato showed an average delayof 226.5 seconds per vehicle, while Gwarko had an average delay of 201.1 seconds per vehicle. Sensitivityanalysis identified the basic saturation flow as the most critical parameter for both intersections. Optimizedsignal phasing, the leading right-turn configuration with optimal timing with a cycle time of 100 seconds forSatdobato, and the existing scenario with optimal timing with a cycle time of 70 seconds for Gwarko resultedin reduced average delays of 51.8 and 52.5 seconds per vehicle, respectively.  Network analysis for thecoordinated intersection led to a back-of-queue length of 606 m, slightly higher than the 578.9 m observedfor the optimized individual intersections. Despite substantial improvements with optimized signals, signalcoordination appeared to be ineffective in this particular case.
+                                </div>
+                            </div>
+                            <div class="publication-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LICENSES -->
+                <div id="licenses" class="section licenses-section">
+                    <h3 class="licenses-title">Licenses & Certifications</h3>
+                    <div class="licenses-container">
+                        <div class="license-card">
+                            <div class="license-image" style="background-image: url('images/licenses/NEC.jpg');"></div>
+                            <div class="license-content">
+                                <div class="license-header">
+                                    <span class="license-name">General Registered Engineer</span>
+                                    <span class="license-year">2024</span>
+                                </div>
+                                <div class="license-org">Nepal Engineering Council (NEC)</div>
+                            </div>
+                        </div>
+
+                        <div class="license-card">
+                            <div class="license-image" style="background-image: url('images/licenses/NCEES.jpg');"></div>
+                            <div class="license-content">
+                                <div class="license-header">
+                                    <span class="license-name">Fundamentals of Engineering (FE)</span>
+                                    <span class="license-year">2026</span>
+                                </div>
+                                <div class="license-org">National Council of Examiners for Engineering and Surveying (NCEES)</div>
+                            </div>
+                        </div>
+
+                        <div class="license-card">
+                            <div class="license-image" style="background-image: url('images/licenses/esri.jpg');"></div>
+                            <div class="license-content">
+                                <div class="license-header">
+                                    <span class="license-name">Geographic Information Systems (GIS)</span>
+                                    <span class="license-year">2027</span>
+                                </div>
+                                <div class="license-org">Texas Tech University</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <div id="contact" class="section contact-section">
+                    <h2 class="contact-title">Contact Me</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="7" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-send">Send Message</button>
+                        <div id="contact-message" style="display:none; margin-top: 10px;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    function toggleEducation(card){card.classList.toggle('expanded');}
+    function togglePublication(card){card.classList.toggle('expanded');}
+
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        // Replace with your backend endpoint if any
+        console.log("Form submitted:", Object.fromEntries(formData.entries()));
+        const msgDiv = document.getElementById("contact-message");
+        msgDiv.style.color = "green";
+        msgDiv.textContent = "Message submitted (static demo)";
+        msgDiv.style.display = "block";
+        setTimeout(()=>{msgDiv.style.display="none";},6000);
+    });
+    </script>
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.section-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) { // 60px offset for spacing
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Optional: scroll to section when nav clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('data-section');
+                const target = document.getElementById(targetId);
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<!-- JS for expand/collapse -->
+<script>
+function toggleEducation(card) {
+    card.classList.toggle('expanded');
+}
+</script>
+
+<!-- JS for expand/collapse -->
+<script>
+function togglePublication(card) {
+    card.classList.toggle('expanded');
+}
+</script>
+
+</body>
+</html>
